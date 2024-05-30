@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: #000;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+html {
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100dvh;
+  background-color: #fff;
+}
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-track {
+  background-color: #bbb;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #444;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background-clip: padding-box;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #222;
+}
+
+.container p.ttl {
+  text-align: center;
+  font-size: 3rem;
+  font-family: "major mono display", sans-serif;
+}
+.container p.ttl span {
+  font-size: 1.7rem;
+}
+.container section.display {
+  width: 849px;
+  height: 300px;
+  margin-inline: auto;
+}
+.container section.display textarea {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  border: 2px solid #aaa;
+  outline: none;
+  box-sizing: border-box;
+  font-size: 1.4rem;
+  padding: 10px;
+  font-family: "Arial", sans-serif;
+  resize: none;
+  letter-spacing: 0em;
+  cursor: text;
+}
+.container section.display textarea::-webkit-scrollbar {
+  display: none;
+}
+.container section.keyboard {
+  width: 849px;
+  height: 244px;
+}
+.container section.keyboard [class*=row] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
+  gap: 5px;
+}
+.container section.keyboard [class*=row] p {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 56px;
+  aspect-ratio: 1/1;
+  background-image: linear-gradient(165deg, #777 0%, #555 25%);
+  color: #fff;
+  margin-top: 5px;
+  text-align: center;
+  line-height: 1.1em;
+  border-radius: 5px;
+  font-family: "Arial", sans-serif;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+.container section.keyboard [class*=row] p span {
+  color: #fff;
+}
+.container section.keyboard [class*=row] p span.active {
+  display: block;
+}
+.container section.keyboard [class*=row] p span.passive {
+  display: none;
+}
+.container section.keyboard [class*=row] p span.assist {
+  position: absolute;
+  right: 3px;
+  bottom: -2px;
+  font-size: 0.8rem;
+  color: #aaa;
+}
+.container section.keyboard [class*=row] p.backspace svg {
+  width: 28px;
+  fill: #fff;
+}
+.container section.keyboard [class*=row] p.capslock, .container section.keyboard [class*=row] p.enter {
+  width: 88px;
+  height: 56px;
+}
+.container section.keyboard [class*=row] p.capslock.upper, .container section.keyboard [class*=row] p.enter.upper {
+  background-image: linear-gradient(165deg, #bbb 0%, #999 25%);
+}
+.container section.keyboard [class*=row] p.shift {
+  position: relative;
+  width: 120px;
+  height: 56px;
+}
+.container section.keyboard [class*=row] p.shift.upper {
+  background-image: linear-gradient(165deg, #bbb 0%, #999 25%);
+}
+.container section.keyboard [class*=row] p.left, .container section.keyboard [class*=row] p.right {
+  width: 80px;
+  height: 56px;
+}
+.container section.keyboard [class*=row] p.deleteall {
+  width: 160px;
+  height: 56px;
+}
+.container section.keyboard [class*=row] p.space {
+  width: 524px;
+  height: 56px;
+}
+.container section.keyboard [class*=row] p.pk_click:not(.shift, .capslock) {
+  background-image: linear-gradient(165deg, #bbb 0%, #999 25%);
+}
+
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+footer a.link {
+  display: block;
+  width: 70px;
+  padding: 5px;
+}
+footer a.link svg {
+  display: block;
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */
