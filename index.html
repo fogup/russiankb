@@ -205,8 +205,8 @@
             <div class="row4">
                 <p class="deleteall">Delete All</p>
                 <p class="space">Space</p>
-                <p class="left"><</p>
-                <p class="right">></p>
+                <p class="copy">Copy</p>
+                <p class="paste">Paste*</p>
             </div>
         </section>
     </div>
@@ -309,6 +309,18 @@
             $('.deleteall').click(function() {
                 var value = $('textarea').val();
                 $('textarea').val('');
+            })
+            $('.copy').click(function() {
+                var copy_tempElement = $("<textarea>");
+                $("body").append(copy_tempElement);
+                copy_tempElement.val($('textarea').val()).select();
+                document.execCommand("copy");
+                copy_tempElement.remove();
+                $(this).text('✓');
+
+                setTimeout(() => {
+                    $(this).text('Copy');
+                }, 1000);
             })
 
 
